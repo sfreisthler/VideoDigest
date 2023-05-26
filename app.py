@@ -90,8 +90,8 @@ with st.form("entry_form", clear_on_submit=True):
 
 if submitted1:
     with st.form("entry_form", clear_on_submit=True):
-    question = st.text_input("Question: ")
-    submitted2 = st.form_submit_button("Ask Question")
+        question = st.text_input("Question: ")
+        submitted2 = st.form_submit_button("Ask Question")
 
 if submitted2:
     db = create_db_from_youtube_video_url(video_url)
