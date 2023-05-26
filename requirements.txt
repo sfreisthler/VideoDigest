@@ -1,4 +1,3 @@
 streamlit
 langchain
-os
-textwrap
+openai
