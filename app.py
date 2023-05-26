@@ -84,7 +84,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # --- Get Data From User --- 
-with st.form("link_form, clear_on_submit=True):
+with st.form("link_form", clear_on_submit=True):
     video_url = st.text_input("Video URL:")
     submitted1 = st.form_submit_button("Search Video")
 
