@@ -86,15 +86,11 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # --- Get Data From User --- 
 with st.form("link_form", clear_on_submit=True):
     video_url = st.text_input("Video URL:")
-    submitted1 = st.form_submit_button("Search Video")
+    question = st.text_input("Question: ")
+    submitted = st.form_submit_button("Ask Question")
 
-if submitted1:
-    with st.form("question_form", clear_on_submit=True):
-        question = st.text_input("Question: ")
-        submitted2 = st.form_submit_button("Ask Question")
-
-    if submitted2:
-        db = create_db_from_youtube_video_url(video_url)
-        query = question
-        response, docs = get_response_from_query(db, query)
-        st.write(textwrap.fill(response, width=50))
+if submitted:
+    db = create_db_from_youtube_video_url(video_url)
+    query = question
+    response, docs = get_response_from_query(db, query)
+    st.write(textwrap.fill(response, width=50))
