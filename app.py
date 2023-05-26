@@ -93,8 +93,8 @@ if submitted1:
         question = st.text_input("Question: ")
         submitted2 = st.form_submit_button("Ask Question")
 
-if submitted2:
-    db = create_db_from_youtube_video_url(video_url)
-    query = question
-    response, docs = get_response_from_query(db, query)
-    st.write(textwrap.fill(response, width=50))
+    if submitted2:
+        db = create_db_from_youtube_video_url(video_url)
+        query = question
+        response, docs = get_response_from_query(db, query)
+        st.write(textwrap.fill(response, width=50))
