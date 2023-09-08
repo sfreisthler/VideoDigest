@@ -1,3 +1,3 @@
 # VideoDigest
 
-<img src="Images\SadieFreisthler.JPG" width ="300">
+<img src="video_digest.png" width ="300">
